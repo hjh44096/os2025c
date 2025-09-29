@@ -6,9 +6,12 @@ import (
 )
 
 func main() {
-	// var 64f float64
-	// fmt.Println(64f, reflect.TypeOf(64f))
-
+	//var 64f float64  // error, must start with letter.
+	var f64 float64
+	// total_price := 1000
+	// totalprice := 1000
 	totalPrice := 1000
-	fmt.Println(totalPrice, reflect.TypeOf(totalPrice))
+
+	fmt.Println(totalPrice)
+	fmt.Println(f64, reflect.TypeOf(f64))
 }
