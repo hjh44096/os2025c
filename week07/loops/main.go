@@ -2,14 +2,19 @@ package main
 
 import (
 	"fmt"
-	"reflect"
+	"strings"
+	"time"
 )
 
-func mian() {
-	var length float64 = 3.2
-	var width int = 2
-	fmt.Println("면적은", int(length)*width)
-	fmt.Println("length > width?", int(length) > width)
-	fmt.Println("형변환", reflect.TypeOf(int(length)))
-	fmt.Println("원본", reflect.TypeOf(length))
+func main() {
+	var now time.Time = time.Now()
+	var month string = now.Month().String()
+	var day int = now.Day()
+	fmt.Println(month, day)
+
+	//univ := "Go$ Inha$"
+	changer := strings.NewReplacer("$", "!")
+	//changed := changer.Replace("univ")
+	changed := changer.Replace("Go$ Inha$")
+	fmt.Println(changed)
 }
